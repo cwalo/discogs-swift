@@ -1,13 +1,13 @@
 import Foundation
 
-struct DiscogsArtistSearchResult: Codable, Equatable {
-    let coverImage: String?
-    let id: Int
-    let thumbnail: String
-    let title: String
-    let type: String
-    let uri: String
-    let url: String
+public struct DiscogsArtistSearchResult: Codable, Equatable {
+    public var coverImage: String?
+    public var id: Int
+    public var thumbnail: String
+    public var title: String
+    public var type: String
+    public var uri: String
+    public var url: String
 
     enum CodingKeys: String, CodingKey {
         case url = "resource_url"
