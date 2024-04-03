@@ -1,7 +1,7 @@
 import XCTest
-@testable import discogs_swift
+@testable import DiscogsSwift
 
-final class discogs_swiftTests: XCTestCase {
+final class DiscogsSwiftTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest
