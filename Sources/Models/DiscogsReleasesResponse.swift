@@ -1,8 +1,8 @@
 import Foundation
 
 public struct DiscogsReleasesResponse: Codable {
-    var items = [DiscogsRelease]()
-    var pagination: DiscogsPagination?
+    public var items = [DiscogsRelease]()
+    public var pagination: DiscogsPagination?
     
     enum CodingKeys: String, CodingKey {
         case items = "releases"

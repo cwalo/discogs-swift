@@ -1,11 +1,11 @@
 import Foundation
 
 public struct DiscogsPagination : Codable {
-    var items: Int
-    var page: Int
-    var pages: Int
-    var itemsPerPage: Int
-    var urls: [String: String]?
+    public var items: Int
+    public var page: Int
+    public var pages: Int
+    public var itemsPerPage: Int
+    public var urls: [String: String]?
     
     enum CodingKeys: String, CodingKey {
         case itemsPerPage = "per_page"

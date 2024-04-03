@@ -1,17 +1,17 @@
 import Foundation
 
 public struct DiscogsArtist: Codable, Equatable {
-    var id: Int?
-    var name: String?
-    var profile: String?
-    var releasesURL: String?
-    var url: String?
-    var role: String?
-    var tracks: String?
-    var externalURLs: [String]?
-    var members: [DiscogsArtist]?
-    var thumbnail: String?
-    var images: [DiscogsImage]?
+    public var id: Int?
+    public var name: String?
+    public var profile: String?
+    public var releasesURL: String?
+    public var url: String?
+    public var role: String?
+    public var tracks: String?
+    public var externalURLs: [String]?
+    public var members: [DiscogsArtist]?
+    public var thumbnail: String?
+    public var images: [DiscogsImage]?
     
     enum CodingKeys: String, CodingKey {
         case releasesURL = "releases_url"

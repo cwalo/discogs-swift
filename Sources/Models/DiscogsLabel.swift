@@ -1,12 +1,12 @@
 import Foundation
 
 public struct DiscogsLabel: Codable, Equatable {
-    var id: Int?
-    var name: String?
-    var profile: String?
-    var releasesURL: String?
-    var url: String?
-    var images: [DiscogsImage]?
+    public var id: Int?
+    public var name: String?
+    public var profile: String?
+    public var releasesURL: String?
+    public var url: String?
+    public var images: [DiscogsImage]?
     
     enum CodingKeys: String, CodingKey {
         case releasesURL = "releases_url"

@@ -1,24 +1,24 @@
 import Foundation
 
-enum DiscogsResourceType: String, Codable {
+public enum DiscogsResourceType: String, Codable {
     case artist, label, master, release
 }
 
-struct DiscogsSearchResult: Codable, Equatable  {
-    let id: Int
-    let catno: String?
-    let country: String?
-    let url: String
-    let thumbnail: String
-    let coverImage: String?
-    let title: String
-    let type: DiscogsResourceType
-    let uri: String
-    let year: String?
-    let genre: [String]?
-    let label: [String]?
-    let format: [String]?
-    let style: [String]?
+public struct DiscogsSearchResult: Codable, Equatable  {
+    public var id: Int
+    public var catno: String?
+    public var country: String?
+    public var url: String
+    public var thumbnail: String
+    public var coverImage: String?
+    public var title: String
+    public var type: DiscogsResourceType
+    public var uri: String
+    public var year: String?
+    public var genre: [String]?
+    public var label: [String]?
+    public var format: [String]?
+    public var style: [String]?
     
     enum CodingKeys: String, CodingKey {
         case url = "resource_url"
@@ -38,28 +38,9 @@ struct DiscogsSearchResult: Codable, Equatable  {
     }
 }
 
-struct DiscogsArtistSearchResult: Codable, Equatable {
-    let coverImage: String?
-    let id: Int
-    let thumbnail: String
-    let title: String
-    let type: String
-    let uri: String
-    let url: String
-
-    enum CodingKeys: String, CodingKey {
-        case url = "resource_url"
-        case thumbnail = "thumb"
-        case coverImage = "cover_image"
-        case id
-        case title
-        case type
-        case uri
-    }
-}
 
 extension DiscogsSearchResult {
-    static let mock = Self.init(id: 1,
+    public static let mock = Self.init(id: 1,
                                 catno: "",
                                 country: "US",
                                 url: "www.google.com",

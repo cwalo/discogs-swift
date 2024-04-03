@@ -19,7 +19,7 @@ public enum DiscogsQueryParameter: String {
     submitter,
     contributor
     
-    static let all = [type,
+    public static let all = [type,
                       title,
                       release_title,
                       credit,

@@ -1,22 +1,22 @@
 import Foundation
 
 public struct DiscogsRelease: Codable, Equatable {
-    var id: Int
-    var title: String
-    var url: String
-    var year: Int?
-    var artist: String?
-    var artists: [DiscogsArtist]?
-    var additionalArtists: [DiscogsArtist]?
-    var country: String?
-    var mainReleaseID: Int?
-    var mainReleaseURL: String?
-    var tracklist: [DiscogsTrack]?
-    var thumbnail: String?
-    var images: [DiscogsImage]?
-    var genres: [String]?
-    var styles: [String]?
-    var labels: [DiscogsLabel]?
+    public var id: Int
+    public var title: String
+    public var url: String
+    public var year: Int?
+    public var artist: String?
+    public var artists: [DiscogsArtist]?
+    public var additionalArtists: [DiscogsArtist]?
+    public var country: String?
+    public var mainReleaseID: Int?
+    public var mainReleaseURL: String?
+    public var tracklist: [DiscogsTrack]?
+    public var thumbnail: String?
+    public var images: [DiscogsImage]?
+    public var genres: [String]?
+    public var styles: [String]?
+    public var labels: [DiscogsLabel]?
     
     enum CodingKeys: String, CodingKey {
         case url = "resource_url"

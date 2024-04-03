@@ -1,6 +1,6 @@
 import Foundation
 
-enum DiscogsResource: Equatable {
+public enum DiscogsResource: Equatable {
     case artist(DiscogsArtist)
     case label(DiscogsLabel)
     case master(DiscogsMaster)
@@ -9,7 +9,7 @@ enum DiscogsResource: Equatable {
 }
 
 extension DiscogsResource {
-    var resourceType: DiscogsResourceType {
+    public var resourceType: DiscogsResourceType {
         switch self {
         case let .searchResult(result):
             return result.type
@@ -24,7 +24,7 @@ extension DiscogsResource {
         }
     }
     
-    var resourceURL: String? {
+    public var resourceURL: String? {
         switch self {
         case let .searchResult(result):
             return result.url
@@ -39,7 +39,7 @@ extension DiscogsResource {
         }
     }
     
-    var name: String? {
+    public var name: String? {
         switch self {
         case let .searchResult(result):
             return extractArtist(from: result.title)
@@ -54,7 +54,7 @@ extension DiscogsResource {
         }
     }
     
-    var title: String? {
+    public var title: String? {
         switch self {
         case let .searchResult(result):
             return extractRelease(from: result.title)
@@ -69,7 +69,7 @@ extension DiscogsResource {
         }
     }
     
-    var image: URL? {
+    public var image: URL? {
         var url: String?
         switch self {
         case let .searchResult(result):
@@ -88,14 +88,14 @@ extension DiscogsResource {
         return URL(string: url)
     }
 
-    func extractArtist(from title: String) -> String? {
+    public func extractArtist(from title: String) -> String? {
         let sanitized = title.replacingOccurrences(of: "*", with: "")
         let components = sanitized.components(separatedBy: " - ")
         if components.isEmpty { return nil }
         return components[0].removeParentheses()
     }
 
-    func extractRelease(from title: String) -> String? {
+    public func extractRelease(from title: String) -> String? {
         let sanitized = title.replacingOccurrences(of: "*", with: "")
         let components = sanitized.components(separatedBy: " - ")
         if components.count < 2 { return nil }
@@ -103,9 +103,4 @@ extension DiscogsResource {
     }
 }
 
-fileprivate
-extension String {
-    var sanitized: String {
-        self.removeParentheses().replacingOccurrences(of: "*", with: "")
-    }
-}
+

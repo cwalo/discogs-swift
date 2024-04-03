@@ -1,8 +1,8 @@
 import Foundation
 
 public struct DiscogsSearchResponse: Codable {
-    var items: [DiscogsSearchResult]
-    var pagination: DiscogsPagination
+    public var items: [DiscogsSearchResult]
+    public var pagination: DiscogsPagination
     
     enum CodingKeys: String, CodingKey {
         case items = "results"

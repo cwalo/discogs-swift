@@ -1,9 +1,9 @@
 import Foundation
 
 public struct DiscogsImage: Codable, Equatable {
-    var height: Int = 0
-    var width: Int = 0
-    var url: String?
+    public var height: Int = 0
+    public var width: Int = 0
+    public var url: String?
     
     enum CodingKeys: String, CodingKey {
         case url = "resource_url"
